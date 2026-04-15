@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="theme-color" content="#0d47a1" />
+  <title>DJ Carbo - Events Made Memorable</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: linear-gradient(135deg, #0d47a1 0%, #1a237e 100%); color: #ffffff; font-family: 'Segoe UI', Arial, sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
+    .card { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border: 2px solid #ffd700; border-radius: 20px; max-width: 420px; width: 100%; padding: 36px 28px; box-shadow: 0 0 40px rgba(255,215,0,0.2); text-align: center; }
+    .qr-section { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #ffd700; }
+    .qr-label { font-size: 11px; color: #ffd700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 14px; }
+    #qrcode { display: flex; justify-content: center; }
+    #qrcode img, #qrcode canvas { border-radius: 10px; padding: 10px; background: #ffffff; }
+    .logo-wrap { margin-bottom: 20px; }
+    .logo-wrap img { width: 140px; height: 140px; object-fit: contain; filter: drop-shadow(0 0 10px rgba(255,215,0,0.3)); }
+    .company-name { font-size: 28px; font-weight: 700; color: #ffffff; letter-spacing: 2px; margin-bottom: 4px; text-transform: uppercase; }
+    .tagline { font-size: 13px; color: #ffd700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px; opacity: 0.9; font-weight: 600; }
+    .divider { border: none; border-top: 1px solid #ffd700; margin: 20px 0; opacity: 0.5; }
+    .info-block { text-align: left; margin-bottom: 28px; }
+    .info-item { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid #2a2a3e; }
+    .info-item:last-child { border-bottom: none; }
+    .info-icon { font-size: 20px; min-width: 26px; text-align: center; margin-top: 2px; }
+    .info-label { font-size: 11px; color: #ffd700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; font-weight: 600; }
+    .info-value { font-size: 15px; color: #e0e0e0; }
+    .services { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 16px 0; }
+    .service-tag { background: rgba(255,215,0,0.1); border: 1px solid #ffd700; color: #ffd700; padding: 6px 12px; border-radius: 20px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .actions { display: flex; flex-direction: column; gap: 12px; }
+    .btn { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 15px 20px; border-radius: 12px; font-size: 15px; font-weight: 600; text-decoration: none; transition: all 0.2s ease; letter-spacing: 0.3px; }
+    .btn-primary { background: #ffd700; color: #0d47a1; }
+    .btn-primary:hover, .btn-primary:active { background: #ffed4e; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(255,215,0,0.4); }
+    .btn-outline { background: transparent; color: #ffd700; border: 1.5px solid #ffd700; }
+    .btn-outline:hover, .btn-outline:active { background: rgba(255,215,0,0.1); transform: translateY(-1px); }
+    .btn-ghost { background: #0d47a1; color: #ffd700; border: 1.5px solid #ffd700; }
+    .btn-ghost:hover, .btn-ghost:active { background: #1565c0; transform: translateY(-1px); }
+    .btn-icon { font-size: 18px; }
+    .social-links { display: flex; justify-content: center; gap: 12px; margin: 16px 0; }
+    .social-btn { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,215,0,0.1); border: 1px solid #ffd700; color: #ffd700; text-decoration: none; transition: all 0.2s ease; font-size: 18px; }
+    .social-btn:hover { background: #ffd700; color: #0d47a1; transform: scale(1.1); }
+    .footer { margin-top: 28px; font-size: 11px; color: #666; }
+    .footer a { color: #ffd700; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="qr-section">
+      <p class="qr-label">Scan to add to contacts</p>
+      <div id="qrcode"></div>
+    </div>
+    <div class="logo-wrap">
+      <img src="dj-carbo-logo.png" alt="DJ Carbo Logo" />
+    </div>
+    <h1 class="company-name">DJ CARBO</h1>
+    <p class="tagline">Events Made Memorable</p>
+    
+    <div class="services">
+      <span class="service-tag">🎵 Weddings</span>
+      <span class="service-tag">🎉 Parties</span>
+      <span class="service-tag">🎤 Events</span>
+      <span class="service-tag">🎧 Club</span>
+      <span class="service-tag">📻 Radio</span>
+    </div>
+
+    <div class="info-block">
+      <div class="info-item">
+        <div class="info-icon">📞</div>
+        <div><div class="info-label">Phone</div><div class="info-value">(727) 686-2006</div></div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">✉️</div>
+        <div><div class="info-label">Bookings</div><div class="info-value">bookings@djcarbo.com</div></div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">📍</div>
+        <div><div class="info-label">Service Area</div><div class="info-value">Pinellas • Hillsborough & Surrounding Counties</div></div>
+      </div>
+    </div>
+
+    <div class="social-links">
+      <a href="https://soundcloud.com/djcarbo77" class="social-btn" title="SoundCloud">🔊</a>
+      <a href="https://instagram.com/djcarbo2018" class="social-btn" title="Instagram">📷</a>
+    </div>
+
+    <hr class="divider" />
+    <div class="actions">
+      <a href="tel:+17276862006" class="btn btn-primary"><span class="btn-icon">📞</span> Call Now</a>
+      <a href="mailto:bookings@djcarbo.com" class="btn btn-outline"><span class="btn-icon">✉️</span> Book Now</a>
+      <a href="https://soundcloud.com/djcarbo77" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"><span class="btn-icon">🎵</span> Listen on SoundCloud</a>
+    </div>
+    <p class="footer">© 2026 DJ Carbo · <a href="https://djcarbo.com">djcarbo.com</a></p>
+  </div>
+  <script>
+    new QRCode(document.getElementById("qrcode"), {
+      text: "https://djcarbo.com/dj-carbo.vcf",
+      width: 160,
+      height: 160,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  </script>
+</body>
+</html>
