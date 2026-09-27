@@ -1,11 +1,8 @@
 # DJ Carbo - Business Card Site
 
-Mobile-first business card website for DJ Carbo.
-- Domain: djcarbo.com
-- Features: QR code for adding contact, social links, booking info
-- Colors: Blue, White, Gold (Argentine theme)
+Mobile-first business card for DJ Carbo at https://djcarbo.com (GitHub Pages).
 
-## Setup
-1. Add logo: `dj-carbo-logo.png`
-2. Push to GitHub
-3. Connect djcarbo.com domain in GoDaddy
+- `index.html`: the whole page (stage-light beams, logo pulse rings and EQ; motion off under reduced-motion)
+- `dj-carbo-logo.webp` / `dj-carbo-logo-web.png`: cleaned logo (transparent, keyline)
+- `dj-carbo.vcf`: contact card; the printed/shared QR points at https://djcarbo.com/dj-carbo.vcf, keep this file
+- `favicon.png`, `apple-touch-icon.png`, `og.jpg`: site icon and link preview
